@@ -9,11 +9,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "fs": "^0.0.1-security",
     "primeicons": "^6.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-snowfall": "^1.2.1",
+    "react-snowflakes": "^1.0.0",
     "react-webcam": "^7.0.1"
-    "react-snowflakes": "^1.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.24",

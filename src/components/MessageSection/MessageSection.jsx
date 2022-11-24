@@ -1,11 +1,10 @@
 import React from 'react'
 import './MessageSection.css'
 
-const MessageSection = () => {
+const MessageSection = ({text}) => {
   return (
     <div className='section-wrap'>
-      <textarea></textarea>
-      <input placeholder='Send To:'></input>
+      <textarea onChange={(e) => text(e.target.value)}></textarea>
     </div>
   )
 }

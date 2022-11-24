@@ -2,11 +2,10 @@ import React, {useCallback, useRef, useState} from 'react'
 import Webcam from "react-webcam";
 
 
-const Camera = () => {
+const Camera = ({whenClick, photo}) => {
   
     const [image,setImage]=useState('');
     let webcamRef = useRef(null);
-  
     const videoConstraints = {
       width: 420,
       height: 420,
@@ -32,10 +31,17 @@ const Camera = () => {
         }
       }
 
+      const clickHandler = () => {
+        capture();
+        whenClick(() => true);
+        
+      }
+      
+      {image !== '' & photo(image)}
   return (
     <>
     <Webcam/>
-    <button onClick={capture}>Take picture</button>
+    <button onClick={clickHandler}>Take picture</button>
     <div className="webcam-img">
 
 {image==''?<Webcam
