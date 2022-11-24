@@ -1,8 +1,9 @@
 import React from 'react'
+import './MoreCardButton.css'
 
-const MoreCardButton = () => {
+const MoreCardButton = ({whenClicked}) => {
   return (
-    <div>MoreCardButton</div>
+    <button onClick={() => whenClicked((prevState) => !prevState)}><i className='pi pi-list'/></button>
   )
 }
 

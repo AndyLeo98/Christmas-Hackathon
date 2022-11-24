@@ -1,16 +1,24 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
+import Camera from './components/Camera/Camera'
+import MoreCardButton from './components/MoreCardButton/MoreCardButton'
+import CardsLibrary from './components/CardsLibrary/CardsLibrary';
+import 'primeicons/primeicons.css';
 import MessageSection from './components/MessageSection/MessageSection'
 
+
 function App() {
-  const [count, setCount] = useState(0)
+  const [isLibraryOpen, setIsLibraryOpen] = useState(false)
 
   return (
-    <>
-  <h4>Xmas Hackaton</h4>
+
+    <div className='app-parent' >
+  <Camera/>
+  <MoreCardButton whenClicked={setIsLibraryOpen}/>
+  {isLibraryOpen && <CardsLibrary/>}
   <MessageSection/>
-    </>
+    </div>
+
   )
 }
 
