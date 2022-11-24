@@ -1,13 +1,18 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
+import MoreCardButton from './components/MoreCardButton/MoreCardButton'
+import CardsLibrary from './components/CardsLibrary/CardsLibrary';
+import 'primeicons/primeicons.css';
+ 
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [isLibraryOpen, setIsLibraryOpen] = useState(false)
 
   return (
-    <div className="App">
-  <h4>Xmas Hackaton</h4>
+    <div className='app-parent' >
+  <MoreCardButton whenClicked={setIsLibraryOpen}/>
+  {isLibraryOpen && <CardsLibrary/>}
     </div>
   )
 }
