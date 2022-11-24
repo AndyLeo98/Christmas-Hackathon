@@ -1,8 +1,12 @@
 import React from 'react'
+import './MessageSection.css'
 
 const MessageSection = () => {
   return (
-    <div>MessageSection</div>
+    <div className='section-wrap'>
+      <textarea></textarea>
+      <input placeholder='Send To:'></input>
+    </div>
   )
 }
 

@@ -1,14 +1,16 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+import MessageSection from './components/MessageSection/MessageSection'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
+    <>
   <h4>Xmas Hackaton</h4>
-    </div>
+  <MessageSection/>
+    </>
   )
 }
 
